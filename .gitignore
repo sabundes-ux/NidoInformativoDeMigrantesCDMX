@@ -1,0 +1,5 @@
+# Ignore generated local secret helper
+js/secrets.js
+
+# Optional local files
+.DS_Store
