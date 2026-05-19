@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Rápido - Sistema de Categorías</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0 0 10px 0;
+        }
+        
+        .section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .code-block {
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            margin: 15px 0;
+        }
+        
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .checklist li {
+            padding: 10px;
+            margin: 5px 0;
+            background: #f9f9f9;
+            border-left: 3px solid #4CAF50;
+        }
+        
+        .checklist li:before {
+            content: "✓ ";
+            color: #4CAF50;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .highlight {
+            background: #fffacd;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .success {
+            background: #d4edda;
+            border: 1px solid #28a745;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #28a745;
+        }
+        
+        .file-list {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            margin: 15px 0;
+        }
+        
+        .file-list div {
+            padding: 5px;
+            margin: 3px 0;
+        }
+        
+        .file-new {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        
+        .file-existing {
+            color: #666;
+        }
+        
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 10px 5px 10px 0;
+        }
+        
+        button:hover {
+            background: #764ba2;
+        }
+        
+        .console {
+            background: #1e1e1e;
+            color: #00ff00;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            font-size: 0.9em;
+        }
+        
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0 0 0;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 1em;
+            border-bottom: 3px solid transparent;
+            color: #666;
+            transition: all 0.3s;
+        }
+        
+        .tab:hover {
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+        
+        .tab.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 20px 0;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .link-card {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid #eee;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .link-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .link-card strong {
+            display: block;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        
+        .link-card small {
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>⚡ Inicio Rápido - Sistema de Categorías</h1>
+        <p>Nido Informativo de Migrantes CDMX</p>
+    </div>
+    
+    <div class="tabs">
+        <button class="tab active" onclick="switchTab('paso1')">1️⃣ Paso 1</button>
+        <button class="tab" onclick="switchTab('paso2')">2️⃣ Paso 2</button>
+        <button class="tab" onclick="switchTab('paso3')">3️⃣ Paso 3</button>
+        <button class="tab" onclick="switchTab('ejemplos')">💡 Ejemplos</button>
+    </div>
+    
+    <!-- PASO 1 -->
+    <div id="paso1" class="tab-content active">
+        <div class="section">
+            <h2>📋 Paso 1: Verificar Archivos Creados</h2>
+            
+            <p>Verifica que estos archivos nuevos estén en tu proyecto:</p>
+            
+            <div class="file-list">
+                <div class="file-new">✓ js/categories-config.js (NUEVO)</div>
+                <div class="file-new">✓ js/data-utilities.js (NUEVO)</div>
+                <div class="file-new">✓ categorias-view.html (NUEVO)</div>
+                <div class="file-new">✓ CATEGORIAS.md (NUEVO)</div>
+                <div class="file-new">✓ GUIA-INTEGRACION.md (NUEVO)</div>
+                <div class="file-new">✓ RESUMEN-CATEGORIAS.txt (NUEVO)</div>
+                <div class="file-existing">↳ index.html (EXISTENTE)</div>
+                <div class="file-existing">↳ js/map.js (EXISTENTE)</div>
+                <div class="file-existing">↳ js/app.js (EXISTENTE)</div>
+            </div>
+            
+            <div class="success">
+                ✅ Si ves todos estos archivos, continúa al Paso 2
+            </div>
+        </div>
+    </div>
+    
+    <!-- PASO 2 -->
+    <div id="paso2" class="tab-content">
+        <div class="section">
+            <h2>🔌 Paso 2: Integrar en index.html</h2>
+            
+            <p>Abre tu archivo <span class="highlight">index.html</span> y agrega estas líneas antes de cerrar el <span class="highlight">&lt;/body&gt;</span>:</p>
+            
+            <div class="code-block">
+&lt;!-- Configuración de categorías (NUEVO) --&gt;
+&lt;script src="./js/categories-config.js"&gt;&lt;/script&gt;
+
+&lt;!-- Utilidades de datos (NUEVO) --&gt;
+&lt;script src="./js/data-utilities.js"&gt;&lt;/script&gt;
+
+&lt;!-- Mapas (EXISTENTE - sin cambios) --&gt;
+&lt;script src="./js/map.js"&gt;&lt;/script&gt;
+            </div>
+            
+            <div class="warning">
+                ⚠️ Importante: Agrega los scripts en este orden:
+                <br>1. categories-config.js
+                <br>2. data-utilities.js
+                <br>3. Después tus scripts existentes
+            </div>
+            
+            <div class="success">
+                ✅ Una vez agregados, continúa al Paso 3
+            </div>
+        </div>
+    </div>
+    
+    <!-- PASO 3 -->
+    <div id="paso3" class="tab-content">
+        <div class="section">
+            <h2>🧪 Paso 3: Probar que Funciona</h2>
+            
+            <p>Abre la Consola de Desarrollador (F12 o Ctrl+Shift+I) y ejecuta esto:</p>
+            
+            <div class="code-block">
+// Debe mostrar las categorías
+console.log(getOrderedCategories());
+
+// Debe mostrar una categoría específica
+console.log(getCategoryById('kitchens'));
+
+// Debe mostrar 6 categorías
+const cats = getOrderedCategories();
+console.log(`Total categorías: ${cats.length}`);
+            </div>
+            
+            <p><strong>Si ves salida en la consola sin errores ✓, ¡estás listo!</strong></p>
+            
+            <div class="success">
+                ✅ Sistema funcionando correctamente
+            </div>
+        </div>
+    </div>
+    
+    <!-- EJEMPLOS -->
+    <div id="ejemplos" class="tab-content">
+        <div class="section">
+            <h2>💡 Ejemplo 1: Mostrar Todas las Categorías</h2>
+            <div class="code-block">
+const categories = getOrderedCategories();
+
+categories.forEach(cat => {
+    console.log(`${cat.icon} ${cat.name}`);
+    console.log(`   Descripción: ${cat.description}`);
+    console.log(`   Total: ${cat.fields}`);
+});
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>💡 Ejemplo 2: Buscar Servicios</h2>
+            <div class="code-block">
+// Buscar comedores comunitarios
+const kitchens = getCategoryById('kitchens');
+const community = filterBySubcategory(
+    comedoresData, 
+    'kitchens', 
+    'community'
+);
+
+console.log(`Encontré ${community.length} comedores comunitarios`);
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>💡 Ejemplo 3: Lugares Cercanos</h2>
+            <div class="code-block">
+// Usuario en ubicación (19.48, -99.15)
+const nearby = findNearbyPlaces(
+    allServices,
+    19.48,
+    -99.15,
+    2  // 2 km de radio
+);
+
+nearby.forEach(place => {
+    console.log(`${place.Nombre} - ${formatDistance(place.distance)}`);
+});
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>💡 Ejemplo 4: Agrupar por Alcaldía</h2>
+            <div class="code-block">
+// Agrupar comedores por alcaldía
+const byBorough = groupByBorough(comedoresData);
+
+Object.entries(byBorough).forEach(([borough, places]) => {
+    console.log(`${borough}: ${places.length} lugares`);
+});
+            </div>
+        </div>
+    </div>
+    
+    <!-- SECCIÓN ADICIONAL -->
+    <div class="section">
+        <h2>📚 Documentación Completa</h2>
+        <p>Para más información, consulta:</p>
+        <div class="links">
+            <div class="link-card" onclick="openFile('CATEGORIAS.md')">
+                <strong>📖 CATEGORIAS.md</strong>
+                <small>Descripción de categorías y estructura</small>
+            </div>
+            <div class="link-card" onclick="openFile('GUIA-INTEGRACION.md')">
+                <strong>🔧 GUIA-INTEGRACION.md</strong>
+                <small>Guía completa de integración</small>
+            </div>
+            <div class="link-card" onclick="openFile('RESUMEN-CATEGORIAS.txt')">
+                <strong>📊 RESUMEN-CATEGORIAS.txt</strong>
+                <small>Resumen visual del sistema</small>
+            </div>
+            <div class="link-card" onclick="openFile('categorias-view.html')">
+                <strong>🎨 categorias-view.html</strong>
+                <small>Demostración interactiva</small>
+            </div>
+        </div>
+    </div>
+    
+    <!-- CHECKLIST FINAL -->
+    <div class="section">
+        <h2>✅ Checklist de Implementación</h2>
+        <ul class="checklist">
+            <li>Descargar archivos nuevos</li>
+            <li>Verificar que están en la carpeta correcta</li>
+            <li>Agregar scripts a index.html</li>
+            <li>Probar en consola F12</li>
+            <li>Ver categorias-view.html en navegador</li>
+            <li>Integrar categorías en tu UI</li>
+            <li>Usar funciones de búsqueda</li>
+            <li>Exportar datos si necesitas</li>
+            <li>Personalizar colores si lo deseas</li>
+            <li>¡Listo para producción!</li>
+        </ul>
+    </div>
+    
+    <!-- AYUDA -->
+    <div class="section">
+        <h2>❓ Problemas Comunes</h2>
+        
+        <div style="margin: 15px 0;">
+            <strong>P: "CATEGORIES_CONFIG is not defined"</strong>
+            <br>
+            R: Verifica que categories-config.js está incluido antes que data-utilities.js
+            <div class="code-block" style="margin-top: 10px;">
+&lt;script src="./js/categories-config.js"&gt;&lt;/script&gt;
+&lt;script src="./js/data-utilities.js"&gt;&lt;/script&gt;
+            </div>
+        </div>
+        
+        <div style="margin: 15px 0;">
+            <strong>P: Las funciones no aparecen en la consola</strong>
+            <br>
+            R: Abre la consola (F12) después de que la página haya cargado completamente
+        </div>
+        
+        <div style="margin: 15px 0;">
+            <strong>P: Quiero agregar más categorías</strong>
+            <br>
+            R: Edita categories-config.js y agrega un nuevo objeto en CATEGORIES_CONFIG
+        </div>
+    </div>
+    
+    <!-- BOTONES DE ACCIÓN -->
+    <div class="section" style="text-align: center;">
+        <h2>🚀 Acciones Rápidas</h2>
+        <button onclick="testFunctions()">🧪 Probar Funciones</button>
+        <button onclick="showSummary()">📊 Ver Resumen</button>
+        <button onclick="openView()">🎨 Abrir Vista</button>
+        <button onclick="copyCode()">📋 Copiar Ejemplo</button>
+    </div>
+    
+    <script>
+        function switchTab(tabName) {
+            // Ocultar todos
+            document.querySelectorAll('.tab-content').forEach(t => {
+                t.classList.remove('active');
+            });
+            document.querySelectorAll('.tab').forEach(t => {
+                t.classList.remove('active');
+            });
+            
+            // Mostrar seleccionado
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+        
+        function openFile(file) {
+            alert(`Abre el archivo: ${file}\n\nUbicación: ${file}`);
+        }
+        
+        function testFunctions() {
+            const msg = `
+✅ PRUEBA DE FUNCIONES
+
+Abre la consola (F12) y verás:
+- console.log(getOrderedCategories())
+- console.log(getCategoryById('kitchens'))
+- console.log(searchPlaces)
+
+Revisa que no haya errores rojos.
+            `;
+            alert(msg);
+        }
+        
+        function showSummary() {
+            const msg = `
+📊 RESUMEN DEL SISTEMA
+
+✓ 6 categorías principales
+✓ 16 alcaldías con colores
+✓ 780+ servicios registrados
+✓ 15+ funciones disponibles
+✓ Búsqueda, filtrado, exportación
+✓ Geolocalización
+✓ Documentación completa
+            `;
+            alert(msg);
+        }
+        
+        function openView() {
+            window.open('categorias-view.html', '_blank');
+        }
+        
+        function copyCode() {
+            const code = `
+const categories = getOrderedCategories();
+console.log(categories);
+            `.trim();
+            navigator.clipboard.writeText(code);
+            alert('✅ Código copiado al portapapeles');
+        }
+    </script>
+</body>
+</html>
