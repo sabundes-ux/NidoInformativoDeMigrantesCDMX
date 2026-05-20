@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Directorio | NIM</title>
+  <link rel="stylesheet" href="css/tablas.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem 1.5rem;
+      background: #f9f9f9;
+      font-family: sans-serif;
+      color: #222;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      color: #c0392b;
+      margin-bottom: 1.5rem;
+    }
+
+    .filtro-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: flex-end;
+      background: #fff;
+      border: 2px solid #c0392b;
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 2rem;
+      max-width: 640px;
+    }
+
+    .filtro-form label {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #555;
+      flex: 1 1 180px;
+    }
+
+    .filtro-form select {
+      padding: 0.45rem 0.6rem;
+      border: 2px solid #c0392b;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      background: #fff;
+      color: #222;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .filtro-form select:focus {
+      box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.2);
+    }
+
+    .btn-buscar {
+      padding: 0.5rem 1.4rem;
+      background: #c0392b;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.15s;
+      align-self: flex-end;
+    }
+
+    .btn-buscar:hover {
+      background: #a93226;
+    }
+
+    #resultados {
+      max-width: 960px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Directorio NIM</h1>
+
+  <form class="filtro-form" id="filtroForm">
+    <label>
+      Categoría
+      <select id="selectCategoria">
+        <option value="">— Todas —</option>
+        <option value="comedores">Comedores</option>
+        <option value="albergues">Albergues</option>
+        <option value="juridico">Acompañamiento Jurídico</option>
+        <option value="violencia-sexual">Violencia Sexual</option>
+        <option value="instituciones-publicas">Instituciones Públicas</option>
+      </select>
+    </label>
+
+    <label>
+      Alcaldía
+      <select id="selectAlcaldia">
+        <option value="">— Todas —</option>
+        <option value="Álvaro Obregón">Álvaro Obregón</option>
+        <option value="Azcapotzalco">Azcapotzalco</option>
+        <option value="Benito Juárez">Benito Juárez</option>
+        <option value="Coyoacán">Coyoacán</option>
+        <option value="Cuajimalpa de Morelos">Cuajimalpa de Morelos</option>
+        <option value="Cuauhtémoc">Cuauhtémoc</option>
+        <option value="Gustavo A. Madero">Gustavo A. Madero</option>
+        <option value="Iztacalco">Iztacalco</option>
+        <option value="Iztapalapa">Iztapalapa</option>
+        <option value="La Magdalena Contreras">La Magdalena Contreras</option>
+        <option value="Miguel Hidalgo">Miguel Hidalgo</option>
+        <option value="Milpa Alta">Milpa Alta</option>
+        <option value="Tláhuac">Tláhuac</option>
+        <option value="Tlalpan">Tlalpan</option>
+        <option value="Venustiano Carranza">Venustiano Carranza</option>
+        <option value="Xochimilco">Xochimilco</option>
+      </select>
+    </label>
+
+    <button type="submit" class="btn-buscar">Buscar</button>
+  </form>
+
+  <div id="resultados"></div>
+
+  <script src="js/markers.js"></script>
+  <script>
+    var form       = document.getElementById('filtroForm');
+    var contenedor = document.getElementById('resultados');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var catFiltro      = document.getElementById('selectCategoria').value;
+      var alcaldiaFiltro = document.getElementById('selectAlcaldia').value;
+
+      var features = window.NIM_MAPBOX_DATA.geojson.features.filter(function (f) {
+        var p = f.properties;
+        var okCat      = !catFiltro      || p.category === catFiltro;
+        var okAlcaldia = !alcaldiaFiltro || p.borough  === alcaldiaFiltro;
+        return okCat && okAlcaldia;
+      });
+
+      contenedor.innerHTML = '';
+
+      if (features.length === 0) {
+        contenedor.innerHTML = '<p class="sin-resultados">No se encontraron resultados para los filtros seleccionados.</p>';
+        return;
+      }
+
+      var grupos = {};
+      features.forEach(function (f) {
+        var cat = f.properties.categoryLabel || f.properties.category;
+        if (!grupos[cat]) grupos[cat] = [];
+        grupos[cat].push(f.properties);
+      });
+
+      Object.keys(grupos).forEach(function (catLabel) {
+        var spots   = grupos[catLabel];
+        var seccion = document.createElement('div');
+        seccion.className = 'resultados-categoria';
+
+        var filas = spots.map(function (p) {
+          var telefono = p.phone
+            ? '<a href="' + (p.phoneHref || 'tel:' + p.phone) + '" target="_blank">' + p.phone + '</a>'
+            : '—';
+          var mapa = p.mapsUrl
+            ? '<a href="' + p.mapsUrl + '" target="_blank">Ver mapa</a>'
+            : '—';
+          return '<tr>'
+            + '<td>' + (p.name     || '—') + '</td>'
+            + '<td>' + (p.borough  || '—') + '</td>'
+            + '<td>' + (p.schedule || '—') + '</td>'
+            + '<td>' + telefono + '</td>'
+            + '<td>' + mapa     + '</td>'
+            + '</tr>';
+        }).join('');
+
+        seccion.innerHTML =
+            '<h2>' + catLabel + '</h2>'
+          + '<span class="total-badge">' + spots.length + ' resultado' + (spots.length !== 1 ? 's' : '') + '</span>'
+          + '<table class="dir-table">'
+          +   '<thead><tr>'
+          +     '<th>Nombre del lugar</th>'
+          +     '<th>Alcaldía</th>'
+          +     '<th>Horario</th>'
+          +     '<th>Teléfono</th>'
+          +     '<th>Google Maps</th>'
+          +   '</tr></thead>'
+          +   '<tbody>' + filas + '</tbody>'
+          + '</table>';
+
+        contenedor.appendChild(seccion);
+      });
+    });
+  </script>
+
+</body>
+</html>
