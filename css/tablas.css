@@ -1,0 +1,97 @@
+/* tablas.css – estilos base para tablas de directorio */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── Sección de resultados por categoría ── */
+.resultados-categoria {
+  margin-bottom: 2.5rem;
+}
+
+.resultados-categoria h2 {
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #c0392b;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.resultados-categoria .total-badge {
+  display: inline-block;
+  background: #c0392b;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.15rem 0.65rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+/* ── Tabla ── */
+table.dir-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 2px solid #c0392b;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+}
+
+table.dir-table thead {
+  background: #c0392b;
+  color: #fff;
+}
+
+table.dir-table thead th {
+  padding: 0.65rem 0.9rem;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+table.dir-table tbody tr {
+  background: #fff;
+  transition: background 0.15s;
+}
+
+table.dir-table tbody tr:nth-child(even) {
+  background: #fdf3f3;
+}
+
+table.dir-table tbody tr:hover {
+  background: #fce4e4;
+}
+
+table.dir-table tbody td {
+  padding: 0.6rem 0.9rem;
+  border-top: 1px solid #f0c0c0;
+  color: #333;
+  vertical-align: top;
+}
+
+/* ── Links dentro de la tabla ── */
+table.dir-table a {
+  color: #c0392b;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+table.dir-table a:hover {
+  text-decoration: underline;
+}
+
+/* ── Sin resultados ── */
+.sin-resultados {
+  font-family: sans-serif;
+  color: #888;
+  padding: 1rem 0;
+  font-style: italic;
+}
