@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nido Informativo de Migrantes CDMX | Mapbox</title>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body class="mapbox-page">
+    <div id="mapa" aria-label="Mapa de servicios para personas migrantes en CDMX"></div>
+
+    <main class="map-ui" aria-label="Mapa interactivo">
+        <section class="map-toolbar" aria-label="Filtros de categorias">
+            <div class="map-toolbar__heading">
+                <h1>Nido Informativo de Migrantes CDMX</h1>
+                <p id="markerCount">0 marcadores visibles</p>
+            </div>
+            <div id="categoryFilters" class="filter-buttons"></div>
+        </section>
+
+        <aside id="placePanel" class="place-panel is-hidden" aria-live="polite"></aside>
+    </main>
+
+    <div id="mapWarning" class="map-warning" hidden></div>
+
+    <script src="./js/secrets.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.js"></script>
+    <script src="./js/mapbox-config.js"></script>
+    <script src="./js/datasets.js"></script>
+    <script src="./js/mapa.js"></script>
+</body>
+</html>
