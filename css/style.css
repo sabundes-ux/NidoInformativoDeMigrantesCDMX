@@ -4,11 +4,11 @@
 }
 :root {
     --text-color: rgb(0, 0, 0);
-    --bg-color: #ffffc5;
-    --subtitle-color: rgb(255, 0, 0);
+    --bg-color: #dbd6d1;
+    --subtitle-color: #9c1a15;
     --font: "Nidus", sans-serif;
     --title-font: "Nidus", sans-serif;
-    --accent-color: #ff0000;
+    --accent-color: #9c1a15;
     --nav-color: #000;
     --title-color: #000;
     --header-height: 4rem;
@@ -177,7 +177,7 @@ header nav .menu a:hover {
 
 h1 {
     font-size: .8em;
-    color: black(0, 0, 0);
+    color: var(--text-color);
 }
 
 h2 {
