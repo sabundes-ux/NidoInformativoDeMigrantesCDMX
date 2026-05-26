@@ -1,8 +1,8 @@
 window.NIM_MAPBOX_CONFIG = {
     map: {
         container: "mapa",
-        style: "mapbox://styles/mapbox/light-v11",
-        center: [-99.1332, 19.4326],
+        style: "mapbox://styles/sabundes/cmotaf3s8001601rygfdy5t7p",
+        center: [-99.1323,    19.43],
         zoom: 10.5,
         pitch: 0,
         attributionControl: true
