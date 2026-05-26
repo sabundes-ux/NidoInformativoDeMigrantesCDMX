@@ -1,0 +1,311 @@
+@font-face {
+    font-family: 'Nidus';
+    src: url('./Nidus-Regular.woff2') format('woff2');
+}
+:root {
+    --text-color: rgb(0, 0, 0);
+    --bg-color: #ffffc5;
+    --subtitle-color: rgb(255, 0, 0);
+    --font: "Nidus", sans-serif;
+    --title-font: "Nidus", sans-serif;
+    --accent-color: #ff00ea;
+    --nav-color: #000;
+    --nav-font: "gelica", sans-serif;
+    --title-color: #000;
+    --header-height: 4rem;
+}
+
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+    font-family: var(--title-font);
+    padding: 0; 
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo a {
+    display: none;
+}
+
+header .logo a:hover {
+    color: var(--accent-color);
+}
+
+header .sections {
+    display: flex;
+    gap: 1.5rem;
+}
+
+header .sections a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+header .sections a:hover {
+    text-decoration: underline;
+}
+
+head {
+    display: block;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    font-family: var(--font);
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+    background: url('../img/familiamigrante.svg');
+    background-size: 100% auto;
+    background-attachment: fixed;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 640px) {
+    body {
+        overflow: hidden;
+    }
+}
+
+svg,
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    width: 100%;
+    max-width: 60ch;
+    align-items: center;
+}
+
+nav {
+    display: block;
+    text-align: left;
+    color: var(--nav-color);
+    font-family: var(--nav-font);
+    font-weight: 900;
+}
+
+a {
+    color: inherit;
+    font-weight: 400;
+}
+
+a:hover {
+    transition: all 1s ease;
+    color: var(--accent-color);
+    font-weight: 900;
+}
+
+/* general header link sizing is managed by specific selectors */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--title-color);
+    font-family: var(--title-font);
+    font-variation-settings: "wdth" 400, "wght" 400;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+/* reset nav font-size so links are normal size */
+nav {
+    font-size: 1rem;
+}
+
+/* header-specific layout */
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    width: 100%;
+    padding: 0 3em;
+}
+
+header nav .logo {
+    margin-right: 2rem;
+    /* separate logo from menu */
+}
+
+header nav .menu {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav .menu a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 1rem;
+    --font
+}
+
+header nav .menu a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: .8em;
+    color: black(0, 0, 0);
+}
+
+h2 {
+    font-size: 1em;
+
+}
+
+h3 {
+    font-size: 2em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: calc(100vh - var(--header-height));
+    padding-top: var(--header-height);
+    text-align: left;
+    width: 100%;
+    background-color: transparent;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: center;
+        display: flex;
+    }
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    line-height: 1.1em;
+    padding: 1em;
+    height: auto;
+    justify-content: flex-start;
+}
+
+@media screen and (min-width: 640px) {
+    article {
+        width: 50%;
+        line-height: 1.1em;
+        padding: 3em;
+        padding-left: 0;
+        padding-top: 0;
+    }
+}
+
+figure {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    float: left;
+    padding: 1em;
+}
+
+@media screen and (min-width: 640px) {
+    figure {
+        display: flex;
+        padding-bottom: 5em;
+        padding-right: 2em;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        padding-top: 1.1em;
+    }
+
+}
+
+figure img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+footer {
+    padding-left: 3em;
+    padding-bottom: .5em;
+    font-size: max(14px, 0.5em);
+    color: var(--title-color);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a#centro-logo {
+    display: block;
+    height: auto;
+    padding: 0 3em;
+}
+a#centro-logo svg {
+    transition: all 1s ease;
+    width: auto;
+    height: 1em;
+}
+
+a#centro-logo:hover svg {
+    fill: var(--accent-color);
+}
+
+.footer-content {
+    flex-grow: 1;
+}
+
+.footer-right {
+    padding-right: 3em;
+}
+
+
+@media screen and (max-width: 640px) {
+    footer {
+       position: relative;
+    }
+}
