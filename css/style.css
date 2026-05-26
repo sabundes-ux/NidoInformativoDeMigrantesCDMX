@@ -8,9 +8,8 @@
     --subtitle-color: rgb(255, 0, 0);
     --font: "Nidus", sans-serif;
     --title-font: "Nidus", sans-serif;
-    --accent-color: #ff00ea;
+    --accent-color: #ff0000;
     --nav-color: #000;
-    --nav-font: "gelica", sans-serif;
     --title-color: #000;
     --header-height: 4rem;
 }
@@ -40,7 +39,7 @@ header {
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 header .logo a {
@@ -77,7 +76,7 @@ body {
     font-size: 1.5rem;
     padding: 0;
     margin: 0;
-    background: url('../img/familiamigrante.svg');
+    background: url('../img/FondoHero.png');
     background-size: 100% auto;
     background-attachment: fixed;
     background-position: bottom left;
@@ -100,6 +99,9 @@ main {
     width: 100%;
     max-width: 60ch;
     align-items: center;
+    padding-top: var(--header-height);
+    padding-bottom: 200px;
+    padding-left: 2em;
 }
 
 nav {
@@ -147,33 +149,29 @@ nav {
 header nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 1em;
+    justify-content: flex-start;
+    gap: 2em;
     width: 100%;
-    padding: 0 3em;
-}
-
-header nav .logo {
-    margin-right: 2rem;
-    /* separate logo from menu */
+    padding: 0 2em;
 }
 
 header nav .menu {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
 header nav .menu a {
-    color: var(--accent-color);
+    color: var(--nav-color);
     text-decoration: none;
     font-size: 1rem;
-    --font
+    font-weight: 600;
 }
 
 header nav .menu a:hover {
+    color: var(--accent-color);
     text-decoration: underline;
 }
 
@@ -266,46 +264,20 @@ figure img {
 }
 
 footer {
-    padding-left: 3em;
-    padding-bottom: .5em;
-    font-size: max(14px, 0.5em);
-    color: var(--title-color);
     position: fixed;
     bottom: 0;
-    right: 0;
-    width: 100%;
-    color: white;
+    left: 0;
+    z-index: 999;
+    padding: 2em;
+    background: transparent;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+    justify-content: flex-start;
+    height: 50vh;
 }
 
-a#centro-logo {
-    display: block;
-    height: auto;
-    padding: 0 3em;
-}
-a#centro-logo svg {
-    transition: all 1s ease;
+footer img {
+    max-width: none;
+    height: 50%;
     width: auto;
-    height: 1em;
-}
-
-a#centro-logo:hover svg {
-    fill: var(--accent-color);
-}
-
-.footer-content {
-    flex-grow: 1;
-}
-
-.footer-right {
-    padding-right: 3em;
-}
-
-
-@media screen and (max-width: 640px) {
-    footer {
-       position: relative;
-    }
 }
