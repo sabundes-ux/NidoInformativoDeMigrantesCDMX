@@ -77,7 +77,7 @@ body {
     padding: 0;
     margin: 0;
     background: url('../img/FondoHero.png');
-    background-size: 100% auto;
+    background-size: cover;
     background-attachment: fixed;
     background-position: bottom left;
     background-repeat: no-repeat;
@@ -96,12 +96,11 @@ img {
 }
 
 main {
-    width: 100%;
-    max-width: 60ch;
+    width: 75%;
+    max-width: 50ch;
     align-items: center;
     padding-top: var(--header-height);
-    padding-bottom: 200px;
-    padding-left: 2em;
+    padding-left: 3rem;
 }
 
 nav {
@@ -268,16 +267,36 @@ footer {
     bottom: 0;
     left: 0;
     z-index: 999;
-    padding: 2em;
+    padding: 0em;
     background: transparent;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    height: 50vh;
+    height: 25vh;
+    width: 75%;
+    padding: 2em;
 }
 
 footer img {
-    max-width: none;
-    height: 50%;
-    width: auto;
+    max-width: 100%;
+    height: auto;
+    width: 75%;
+    /* margin: 0 auto; */
+}
+#recurso-imagen {
+    position: fixed;
+    right: 0;
+    top: var(--header-height);
+    z-index: 500;
+    height: calc(100vh - var(--header-height));
+    display: flex;
+    align-items: right;
+    justify-content: flex-end;
+}
+
+#recurso-imagen img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: bottom;
 }
