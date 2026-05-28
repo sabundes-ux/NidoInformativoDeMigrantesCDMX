@@ -87,6 +87,9 @@
 
       contenedor.innerHTML = '';
 
+      // Scroll suave hacia los resultados
+      contenedor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
       if (features.length === 0) {
         contenedor.innerHTML = '<p class="sin-resultados">No se encontraron resultados para los filtros seleccionados.</p>';
         return;
