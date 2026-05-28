@@ -34,6 +34,8 @@ body {margin: 0; padding: 0; overflow: hidden;}
     position: absolute;
     top: calc(var(--header-height) + 1em);
     left: 16px;
+    border-width: 3px;
+    border-color: #9c1a15;
     width: min(380px, calc(100vw - 32px));
     padding: 14px;
 }
@@ -41,7 +43,7 @@ body {margin: 0; padding: 0; overflow: hidden;}
 .map-toolbar__heading {
     display: flex;
     justify-content: space-between;
-    gap: 16px;
+    gap: 6px;
     align-items: flex-start;
     margin-bottom: 12px;
 }
@@ -90,8 +92,9 @@ body {margin: 0; padding: 0; overflow: hidden;}
 }
 
 .filter-button.is-active {
-    border-color: #1f2937;
+    border-color: #9c1a15;
     color: #111827;
+    border-width: medium;
     background: #ffffff;
 }
 
