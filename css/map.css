@@ -1,10 +1,10 @@
 body {margin: 0; padding: 0; overflow: hidden;}
 #mapa {
     width: 100%;
-    height: 100%;
+    height: calc(100% - var(--header-height));
     position: fixed;
     left: 0;
-    top: 0;
+    top: var(--header-height);
 }
 
 .mapbox-page {
@@ -32,7 +32,7 @@ body {margin: 0; padding: 0; overflow: hidden;}
 
 .map-toolbar {
     position: absolute;
-    top: 16px;
+    top: calc(var(--header-height) + 1em);
     left: 16px;
     width: min(380px, calc(100vw - 32px));
     padding: 14px;
