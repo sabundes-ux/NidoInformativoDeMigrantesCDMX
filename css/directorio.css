@@ -58,6 +58,9 @@
 }
 
 body {
-    background: #dbd6d1 !important;
-    background-image: none !important;
+    background: url('../img/backgrouncdmx.png') !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
 }
