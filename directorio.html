@@ -29,12 +29,13 @@
       <p>Utiliza el siguiente formulario para filtrar los servicios disponibles en el mapa por categoría y alcaldía. Al
         hacer clic en "Buscar", se mostrarán los resultados que coincidan con los filtros seleccionados.</p>
 
-      <p>Antes de acudir a los servicios listados en este directorio, te recomendamos verificar su información de contacto
-        y horarios.
-        Ten cuidado con personas o grupos que prometen arreglar papeles, conseguir citas, acelerar trámites o garantizar
+      <p>Antes de acudir a los servicios listados en este directorio, te recomendamos verificar su información de
+        contacto
+        y horarios.</p>
+
+      <p>Ten cuidado con personas o grupos que prometen arreglar papeles, conseguir citas, acelerar trámites o garantizar
         procesos migratorios a cambio de dinero.
-        Muchas personas migrantes son víctimas de estafas y desinformación.
-      </p>
+        Muchas personas migrantes son víctimas de estafas y desinformación.</p>
       <h2>Recomendaciones para evitar fraudes:</h2>
       <ul>
         <li class="feature-list">No entregues tus documentos originales a desconocidos.</li>
@@ -91,14 +92,14 @@
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      
+
       // Validar que el objeto NIM_MAPBOX_DATA exista
       if (!window.NIM_MAPBOX_DATA || !window.NIM_MAPBOX_DATA.geojson || !window.NIM_MAPBOX_DATA.geojson.features) {
         contenedor.innerHTML = '<p class="sin-resultados">Error: Los datos no están disponibles. Por favor, recarga la página.</p>';
         console.error('NIM_MAPBOX_DATA no está disponible', window.NIM_MAPBOX_DATA);
         return;
       }
-      
+
       var catFiltro = document.getElementById('selectCategoria').value;
       var alcaldiaFiltro = document.getElementById('selectAlcaldia').value;
 

@@ -15861,8 +15861,6 @@ window.NIM_MAPBOX_DATA = {
             -99.1752256,
             19.4130768
           ]
-            19
-          ]
         },
         "properties": {
           "id": "albergues-albergues-36",
@@ -15900,8 +15898,6 @@ window.NIM_MAPBOX_DATA = {
             -99.1769726,
             19.3527447
           ]
-            19
-          ]
         },
         "properties": {
           "id": "albergues-albergues-38",
@@ -15912,8 +15908,6 @@ window.NIM_MAPBOX_DATA = {
           "coordinates": [
             -99.1369747,
             19.4217104
-          ]
-            19
           ]
         },
         "properties": {
@@ -15926,8 +15920,6 @@ window.NIM_MAPBOX_DATA = {
             -99.1350805,
             19.4118956
           ]
-            19
-          ]
         },
         "properties": {
           "id": "albergues-albergues-40",
@@ -15938,8 +15930,6 @@ window.NIM_MAPBOX_DATA = {
           "coordinates": [
             -99.1516147,
             19.4292430
-          ]
-            19
           ]
         },
         "properties": {
@@ -15952,8 +15942,6 @@ window.NIM_MAPBOX_DATA = {
             -99.1550444,
             19.4300804
           ]
-            19
-          ]
         },
         "properties": {
           "id": "albergues-albergues-42",
@@ -15964,8 +15952,6 @@ window.NIM_MAPBOX_DATA = {
           "coordinates": [
             -99.1670105,
             19.3829999
-          ]
-            19
           ]
         },
         "properties": {
@@ -16004,8 +15990,6 @@ window.NIM_MAPBOX_DATA = {
             -99.1779988,
             19.4261037
           ]
-            19
-          ]
         },
         "properties": {
           "id": "albergues-albergues-45",
@@ -16016,8 +16000,6 @@ window.NIM_MAPBOX_DATA = {
           "coordinates": [
             -99.2129841,
             19.4175747
-          ]
-            19
           ]
         },
         "properties": {
@@ -16030,8 +16012,6 @@ window.NIM_MAPBOX_DATA = {
             -99.1736832,
             19.4074274
           ]
-            19
-          ]
         },
         "properties": {
           "id": "albergues-albergues-47",
@@ -16042,8 +16022,6 @@ window.NIM_MAPBOX_DATA = {
           "coordinates": [
             -99.1914920,
             19.4357569
-          ]
-            19
           ]
         },
         "properties": {
