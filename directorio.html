@@ -36,11 +36,11 @@
         Muchas personas migrantes son víctimas de estafas y desinformación.
       </p>
       <h2>Recomendaciones para evitar fraudes:</h2>
-      <li class="feature-list">No entregues tus documentos originales a desconocidos.</li>
-      <li class="feature-list">Desconfía de promesas "rápidas" o "garantizadas."</li>
-      <li class="feature-list">Busca información únicamente en canales oficiales
-        o redes comunitarias confiables.</li>
-      </p>
+      <ul>
+        <li class="feature-list">No entregues tus documentos originales a desconocidos.</li>
+        <li class="feature-list">Desconfía de promesas "rápidas" o "garantizadas."</li>
+        <li class="feature-list">Busca información únicamente en canales oficiales o redes comunitarias confiables.</li>
+      </ul>
     </div>
     <form class="filtro-form" id="filtroForm">
       <label>
@@ -91,6 +91,14 @@
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      
+      // Validar que el objeto NIM_MAPBOX_DATA exista
+      if (!window.NIM_MAPBOX_DATA || !window.NIM_MAPBOX_DATA.geojson || !window.NIM_MAPBOX_DATA.geojson.features) {
+        contenedor.innerHTML = '<p class="sin-resultados">Error: Los datos no están disponibles. Por favor, recarga la página.</p>';
+        console.error('NIM_MAPBOX_DATA no está disponible', window.NIM_MAPBOX_DATA);
+        return;
+      }
+      
       var catFiltro = document.getElementById('selectCategoria').value;
       var alcaldiaFiltro = document.getElementById('selectAlcaldia').value;
 
