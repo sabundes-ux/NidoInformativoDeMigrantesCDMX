@@ -91,11 +91,22 @@ body#body-directorio {
     background-repeat: no-repeat;
 }
 body#body-acerca-de {
-    background: url('../img/backgroundcdmx.png');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: bottom left;
-    background-repeat: no-repeat;
+    background: url('../img/backgrouncdmx.png') !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+img.manosnim-right {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    max-width: 540px;
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 0;
 }
 @media screen and (min-width: 640px) {
     body {
