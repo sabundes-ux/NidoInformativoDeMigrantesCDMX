@@ -15857,23 +15857,10 @@ window.NIM_MAPBOX_DATA = {
           "category": "albergues",
           "categoryLabel": "ALBERGUES",
           "color": "#785EF0",
-          "name": "Médicos Sin Fronteras",
-          "type": "",
-          "address": "Fernando Montes de Oca 56",
-          "neighborhood": "Condesa",
-          "borough": "Cuauhtémoc",
-          "phone": "55 52564139",
-          "phoneHref": "tel:5552564139",
-          "schedule": "",
-          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=M%C3%A9dicos%20Sin%20Fronteras%2C%20Fernando%20Montes%20de%20Oca%2056%2C%20Condesa%2C%20Cuauht%C3%A9moc%2C%20Ciudad%20de%20M%C3%A9xico"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
           "coordinates": [
-            -99,
+            -99.1752256,
+            19.4130768
+          ]
             19
           ]
         },
@@ -15909,23 +15896,10 @@ window.NIM_MAPBOX_DATA = {
           "category": "albergues",
           "categoryLabel": "ALBERGUES",
           "color": "#785EF0",
-          "name": "Comisión de Derechos Humanos de la Ciudad de México",
-          "type": "",
-          "address": "Av. Universidad 1449",
-          "neighborhood": "Florida",
-          "borough": "Álvaro Obregón",
-          "phone": "55 5229 5600",
-          "phoneHref": "tel:5552295600",
-          "schedule": "",
-          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Comisi%C3%B3n%20de%20Derechos%20Humanos%20de%20la%20Ciudad%20de%20M%C3%A9xico%2C%20Av.%20Universidad%201449%2C%20Florida%2C%20%C3%81lvaro%20Obreg%C3%B3n%2C%20Ciudad%20de%20M%C3%A9xico"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
           "coordinates": [
-            -99,
+            -99.1769726,
+            19.3527447
+          ]
             19
           ]
         },
@@ -15935,23 +15909,10 @@ window.NIM_MAPBOX_DATA = {
           "category": "albergues",
           "categoryLabel": "ALBERGUES",
           "color": "#785EF0",
-          "name": "Secretaría de Inclusión y Bienestar Social de la CDMX",
-          "type": "",
-          "address": "Diagonal 20 de Noviembre 294",
-          "neighborhood": "Obrera",
-          "borough": "Cuauhtémoc",
-          "phone": "55 8957 3450",
-          "phoneHref": "tel:5589573450",
-          "schedule": "",
-          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Secretar%C3%ADa%20de%20Inclusi%C3%B3n%20y%20Bienestar%20Social%20de%20la%20CDMX%2C%20Diagonal%2020%20de%20Noviembre%20294%2C%20Obrera%2C%20Cuauht%C3%A9moc%2C%20Ciudad%20de%20M%C3%A9xico"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
           "coordinates": [
-            -99,
+            -99.1369747,
+            19.4217104
+          ]
             19
           ]
         },
@@ -15961,23 +15922,10 @@ window.NIM_MAPBOX_DATA = {
           "category": "albergues",
           "categoryLabel": "ALBERGUES",
           "color": "#785EF0",
-          "name": "Secretaría del Trabajo y Fomento al Empleo",
-          "type": "",
-          "address": "Calzada San Antonio Abad 32",
-          "neighborhood": "Tránsito",
-          "borough": "Cuauhtémoc",
-          "phone": "55 5709 3233",
-          "phoneHref": "tel:5557093233",
-          "schedule": "",
-          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Secretar%C3%ADa%20del%20Trabajo%20y%20Fomento%20al%20Empleo%2C%20Calzada%20San%20Antonio%20Abad%2032%2C%20Tr%C3%A1nsito%2C%20Cuauht%C3%A9moc%2C%20Ciudad%20de%20M%C3%A9xico"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
           "coordinates": [
-            -99,
+            -99.1350805,
+            19.4118956
+          ]
             19
           ]
         },
@@ -15987,23 +15935,10 @@ window.NIM_MAPBOX_DATA = {
           "category": "albergues",
           "categoryLabel": "ALBERGUES",
           "color": "#785EF0",
-          "name": "COPRED",
-          "type": "",
-          "address": "General Prim 10",
-          "neighborhood": "Juárez",
-          "borough": "Cuauhtémoc",
-          "phone": "554600-8233 555341-3010",
-          "phoneHref": "tel:55460082335553413010",
-          "schedule": "",
-          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=COPRED%2C%20General%20Prim%2010%2C%20Ju%C3%A1rez%2C%20Cuauht%C3%A9moc%2C%20Ciudad%20de%20M%C3%A9xico"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
           "coordinates": [
-            -99,
+            -99.1516147,
+            19.4292430
+          ]
             19
           ]
         },
@@ -16013,23 +15948,10 @@ window.NIM_MAPBOX_DATA = {
           "category": "albergues",
           "categoryLabel": "ALBERGUES",
           "color": "#785EF0",
-          "name": "Comisión Mexicana de Ayuda a Refugiados COMAR",
-          "type": "",
-          "address": "Calle Versalles 49",
-          "neighborhood": "Juárez",
-          "borough": "Cuauhtémoc",
-          "phone": "55 5209 8800",
-          "phoneHref": "tel:5552098800",
-          "schedule": "",
-          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Comisi%C3%B3n%20Mexicana%20de%20Ayuda%20a%20Refugiados%20COMAR%2C%20Calle%20Versalles%2049%2C%20Ju%C3%A1rez%2C%20Cuauht%C3%A9moc%2C%20Ciudad%20de%20M%C3%A9xico"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
           "coordinates": [
-            -99,
+            -99.1550444,
+            19.4300804
+          ]
             19
           ]
         },
@@ -16039,23 +15961,10 @@ window.NIM_MAPBOX_DATA = {
           "category": "albergues",
           "categoryLabel": "ALBERGUES",
           "color": "#785EF0",
-          "name": "Comisión Ejecutiva de Atención a Víctimas",
-          "type": "",
-          "address": "Ángel Urraza 1137",
-          "neighborhood": "Del Valle Centro",
-          "borough": "Benito Juárez",
-          "phone": "55 8957 2347",
-          "phoneHref": "tel:5589572347",
-          "schedule": "",
-          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Comisi%C3%B3n%20Ejecutiva%20de%20Atenci%C3%B3n%20a%20V%C3%ADctimas%2C%20%C3%81ngel%20Urraza%201137%2C%20Del%20Valle%20Centro%2C%20Benito%20Ju%C3%A1rez%2C%20Ciudad%20de%20M%C3%A9xico"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
           "coordinates": [
-            -99,
+            -99.1670105,
+            19.3829999
+          ]
             19
           ]
         },
@@ -16091,23 +16000,10 @@ window.NIM_MAPBOX_DATA = {
           "category": "albergues",
           "categoryLabel": "ALBERGUES",
           "color": "#785EF0",
-          "name": "Consejo Nacional para Prevenir la Discriminación",
-          "type": "",
-          "address": "Dante 14",
-          "neighborhood": "Anzures",
-          "borough": "Miguel Hidalgo",
-          "phone": "800 543 0033 55 5262 1490",
-          "phoneHref": "tel:80054300335552621490",
-          "schedule": "",
-          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Consejo%20Nacional%20para%20Prevenir%20la%20Discriminaci%C3%B3n%2C%20Dante%2014%2C%20Anzures%2C%20Miguel%20Hidalgo%2C%20Ciudad%20de%20M%C3%A9xico"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
           "coordinates": [
-            -99,
+            -99.1779988,
+            19.4261037
+          ]
             19
           ]
         },
@@ -16117,23 +16013,10 @@ window.NIM_MAPBOX_DATA = {
           "category": "albergues",
           "categoryLabel": "ALBERGUES",
           "color": "#785EF0",
-          "name": "Embajada de Guatemala",
-          "type": "",
-          "address": "Explanada 1025",
-          "neighborhood": "Lomas de Chapultepec",
-          "borough": "Miguel Hidalgo",
-          "phone": "5540 7520 55206680",
-          "phoneHref": "tel:5540752055206680",
-          "schedule": "",
-          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Embajada%20de%20Guatemala%2C%20Explanada%201025%2C%20Lomas%20de%20Chapultepec%2C%20Miguel%20Hidalgo%2C%20Ciudad%20de%20M%C3%A9xico"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
           "coordinates": [
-            -99,
+            -99.2129841,
+            19.4175747
+          ]
             19
           ]
         },
@@ -16143,23 +16026,10 @@ window.NIM_MAPBOX_DATA = {
           "category": "albergues",
           "categoryLabel": "ALBERGUES",
           "color": "#785EF0",
-          "name": "Embajada de Honduras",
-          "type": "",
-          "address": "San Juan 220",
-          "neighborhood": "Chapultepec Morales",
-          "borough": "Miguel Hidalgo",
-          "phone": "55 5211 5747",
-          "phoneHref": "tel:5552115747",
-          "schedule": "",
-          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Embajada%20de%20Honduras%2C%20San%20Juan%20220%2C%20Chapultepec%20Morales%2C%20Miguel%20Hidalgo%2C%20Ciudad%20de%20M%C3%A9xico"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
           "coordinates": [
-            -99,
+            -99.1736832,
+            19.4074274
+          ]
             19
           ]
         },
@@ -16169,23 +16039,10 @@ window.NIM_MAPBOX_DATA = {
           "category": "albergues",
           "categoryLabel": "ALBERGUES",
           "color": "#785EF0",
-          "name": "Embajada de El Salvador",
-          "type": "",
-          "address": "Temístocles 88",
-          "neighborhood": "Polanco",
-          "borough": "Miguel Hidalgo",
-          "phone": "55 5281 5723",
-          "phoneHref": "tel:5552815723",
-          "schedule": "",
-          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Embajada%20de%20El%20Salvador%2C%20Tem%C3%ADstocles%2088%2C%20Polanco%2C%20Miguel%20Hidalgo%2C%20Ciudad%20de%20M%C3%A9xico"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
           "coordinates": [
-            -99,
+            -99.1914920,
+            19.4357569
+          ]
             19
           ]
         },
