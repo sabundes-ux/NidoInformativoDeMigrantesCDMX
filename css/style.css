@@ -351,4 +351,5 @@ footer img {
 .feature-list {
     color: var(--accent-color);
     margin-left: 3rem;
+    text-wrap-style: balance;
 }
