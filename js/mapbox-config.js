@@ -36,13 +36,14 @@ window.NIM_MAPBOX_CONFIG = {
                 "circle-color": [
                     "step",
                     ["get", "point_count"],
-                    "#F2B84B",
+                    "#198F51",
                     20,
-                    "#2F9C95",
+                    "#5ec3e8",
                     80,
-                    "#5F6FEF",
+                    "#F3C11B",
                     200,
-                    "#C94F7C"
+                    "#9d1a17"
+                    
                 ],
                 "circle-radius": [
                     "step",
