@@ -32,41 +32,34 @@ footer {
 
 footer img {
     max-width: 100%;
-    height: auto;
+    height: 75;
     width: 75%;
 }
 
 #recurso-imagen {
+    position: fixed;
+    bottom: 0;
     right: 0;
-    top: var(--header-height);
-    z-index: 1;
+    z-index: 100;
     display: flex;
-    align-items: right;
+    align-items: flex-end;
     justify-content: flex-end;
-}
-
-@media screen and (min-width: 1024px) {
-    #recurso-imagen {
-        position: fixed;
-        height: calc(100vh - var(--header-height));
-    }
-
-    #recurso-imagen img {
-        top: calc(50vh - var(--header-height));
-    }
+    width: auto;
+    height: 100%;
+    pointer-events: none;
 }
 
 #recurso-imagen img {
-    max-width: 100%;
-    height: auto;
+    max-width: 50vw;
+    max-height: 90%;
     object-fit: contain;
-    object-position: bottom;
+    object-position: bottom right;
 }
 
 @media screen and (max-width: 860px) {
     #recurso-imagen img {
-        height: 50vh;
-        position: relative;
+        max-width: 40vw;
+        height: auto;
     }
 }
 
