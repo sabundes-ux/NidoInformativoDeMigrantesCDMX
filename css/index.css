@@ -1,0 +1,78 @@
+@import url('./common.css');
+
+body {
+    background: url('../img/FondoHero.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    padding: 0em;
+    background: transparent;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    height: 25vh;
+    padding: 2em;
+    width: 100%;
+}
+
+@media screen and (min-width: 640px) {
+    footer {
+        width: 75%;
+        position: fixed;
+    }
+}
+
+footer img {
+    max-width: 100%;
+    height: auto;
+    width: 75%;
+}
+
+#recurso-imagen {
+    right: 0;
+    top: var(--header-height);
+    z-index: 1;
+    display: flex;
+    align-items: right;
+    justify-content: flex-end;
+}
+
+@media screen and (min-width: 1024px) {
+    #recurso-imagen {
+        position: fixed;
+        height: calc(100vh - var(--header-height));
+    }
+
+    #recurso-imagen img {
+        top: calc(50vh - var(--header-height));
+    }
+}
+
+#recurso-imagen img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: bottom;
+}
+
+@media screen and (max-width: 860px) {
+    #recurso-imagen img {
+        height: 50vh;
+        position: relative;
+    }
+}
+
+/* Feature list styling */
+.feature-list {
+    color: var(--accent-color);
+    margin-left: 3rem;
+    text-wrap-style: balance;
+}

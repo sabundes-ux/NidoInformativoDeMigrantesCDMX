@@ -65,6 +65,14 @@ body {
     background-repeat: no-repeat !important;
 }
 
+main {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: start;
+}
+
+
 .info-section {
     background: rgba(255, 255, 255, 0);
     border-radius: 10px;
@@ -72,5 +80,24 @@ body {
     padding: 2rem;
     border-width: 3px;
     margin-bottom: 2rem;
-    max-width: 640px;
+    /* max-width: 640px; */
+    width: 50%;
+}
+
+#form-table-container {
+    max-width: 100%;
+    padding: 1rem;
+    overflow-x: auto;
+    width: 50%;
+}
+@media screen and (max-width: 768px) {
+    main {
+        padding: 0 1rem;
+        flex-direction: column;
+    }
+
+    .info-section, #form-table-container {
+        width: 100%;
+    }
+
 }

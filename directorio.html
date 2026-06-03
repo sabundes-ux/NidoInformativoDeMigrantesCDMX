@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Directorio | NIM</title>
+  <link rel="icon" type="image/x-icon" href="./img/favicon (1)/favicon.ico">
+  <link rel="apple-touch-icon" href="./img/favicon (1)/apple-touch-icon.png">
+  <link rel="manifest" href="./img/favicon (1)/site.webmanifest">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/tablas.css">
   <link rel="stylesheet" href="./css/directorio.css">
@@ -22,7 +25,6 @@
     </nav>
   </header>
   <main>
-
     <div class="info-section">
       <h2>Directorio de servicios NIM</h2>
 
@@ -43,47 +45,49 @@
         <li class="feature-list">Busca información únicamente en canales oficiales o redes comunitarias confiables.</li>
       </ul>
     </div>
-    <form class="filtro-form" id="filtroForm">
-      <label>
-        Categoría
-        <select id="selectCategoria">
-          <option value="">— Todas —</option>
-          <option value="comedores">Comedores</option>
-          <option value="albergues">Albergues</option>
-          <option value="juridico">Acompañamiento Jurídico</option>
-          <option value="violencia-sexual">Violencia Sexual</option>
-          <option value="instituciones-publicas">Instituciones Públicas</option>
-        </select>
-      </label>
+    <div id="form-table-container">
+      <form class="filtro-form" id="filtroForm">
+        <label>
+          Categoría
+          <select id="selectCategoria">
+            <option value="">— Todas —</option>
+            <option value="comedores">Comedores</option>
+            <option value="albergues">Albergues</option>
+            <option value="juridico">Acompañamiento Jurídico</option>
+            <option value="violencia-sexual">Violencia Sexual</option>
+            <option value="instituciones-publicas">Instituciones Públicas</option>
+          </select>
+        </label>
 
-      <label>
-        Alcaldía
-        <select id="selectAlcaldia">
-          <option value="">— Todas —</option>
-          <option value="Álvaro Obregón">Álvaro Obregón</option>
-          <option value="Azcapotzalco">Azcapotzalco</option>
-          <option value="Benito Juárez">Benito Juárez</option>
-          <option value="Coyoacán">Coyoacán</option>
-          <option value="Cuajimalpa de Morelos">Cuajimalpa de Morelos</option>
-          <option value="Cuauhtémoc">Cuauhtémoc</option>
-          <option value="Gustavo A. Madero">Gustavo A. Madero</option>
-          <option value="Iztacalco">Iztacalco</option>
-          <option value="Iztapalapa">Iztapalapa</option>
-          <option value="La Magdalena Contreras">La Magdalena Contreras</option>
-          <option value="Miguel Hidalgo">Miguel Hidalgo</option>
-          <option value="Milpa Alta">Milpa Alta</option>
-          <option value="Tláhuac">Tláhuac</option>
-          <option value="Tlalpan">Tlalpan</option>
-          <option value="Venustiano Carranza">Venustiano Carranza</option>
-          <option value="Xochimilco">Xochimilco</option>
-        </select>
-      </label>
+        <label>
+          Alcaldía
+          <select id="selectAlcaldia">
+            <option value="">— Todas —</option>
+            <option value="Álvaro Obregón">Álvaro Obregón</option>
+            <option value="Azcapotzalco">Azcapotzalco</option>
+            <option value="Benito Juárez">Benito Juárez</option>
+            <option value="Coyoacán">Coyoacán</option>
+            <option value="Cuajimalpa de Morelos">Cuajimalpa de Morelos</option>
+            <option value="Cuauhtémoc">Cuauhtémoc</option>
+            <option value="Gustavo A. Madero">Gustavo A. Madero</option>
+            <option value="Iztacalco">Iztacalco</option>
+            <option value="Iztapalapa">Iztapalapa</option>
+            <option value="La Magdalena Contreras">La Magdalena Contreras</option>
+            <option value="Miguel Hidalgo">Miguel Hidalgo</option>
+            <option value="Milpa Alta">Milpa Alta</option>
+            <option value="Tláhuac">Tláhuac</option>
+            <option value="Tlalpan">Tlalpan</option>
+            <option value="Venustiano Carranza">Venustiano Carranza</option>
+            <option value="Xochimilco">Xochimilco</option>
+          </select>
+        </label>
 
-      <button type="submit" class="btn-buscar">Buscar</button>
-    </form>
+        <button type="submit" class="btn-buscar">Buscar</button>
+      </form>
 
-    <div id="resultados"></div>
+      <div id="resultados"></div>
 
+    </div>
   </main>
   <script src="js/markers.js"></script>
   <script>
