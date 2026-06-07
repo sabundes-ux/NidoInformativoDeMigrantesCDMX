@@ -27,9 +27,12 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Generate secrets.js
+        env:
+          SECRET_TOKEN: ${{ secrets.MAPBOX_TOKEN }}
         run: |
           mkdir -p js
-          echo "window.MAPBOX_TOKEN = '${{ secrets.MAPBOX_TOKEN }}';" > js/secrets.js
+          CLEAN_TOKEN=$(echo -n "$SECRET_TOKEN" | tr -d '\n\r ')
+          echo "window.MAPBOX_TOKEN = '${CLEAN_TOKEN}';" > js/secrets.js
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
