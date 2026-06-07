@@ -962,7 +962,7 @@ const MAPBOX_CATEGORY_CONFIG = [
         id: "comedores",
         label: "COMEDORES",
         datasetId: "hjuiww",
-        color: "#E69F00",
+        color: "#F3C11B",
         fields: {
             id: "ID",
             name: "Nombre",
@@ -979,7 +979,7 @@ const MAPBOX_CATEGORY_CONFIG = [
         id: "juridico",
         label: "ACOMPANAMIENTO JURIDICO",
         datasetId: "oaebc9",
-        color: "#0072B2",
+        color: "#5ec3e8",
         fields: {
             name: "Nombre",
             address: "Dirección",
@@ -995,7 +995,7 @@ const MAPBOX_CATEGORY_CONFIG = [
         id: "violencia-sexual",
         label: "VIOLENCIA SEXUAL",
         datasetId: "-myqegl",
-        color: "#CC79A7",
+        color: "#9d1a17",
         fields: {
             name: "Nombre",
             address: "Dirección",
@@ -1011,7 +1011,7 @@ const MAPBOX_CATEGORY_CONFIG = [
         id: "instituciones-publicas",
         label: "INSTITUCIONES PUBLICAS",
         datasetId: "-qf9vud",
-        color: "#009E73",
+        color: "#198F51",
         fields: {
             name: "NOMBRE",
             address: "DIRECCION",

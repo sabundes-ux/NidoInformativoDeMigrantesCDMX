@@ -30,7 +30,7 @@ const CATEGORIES_CONFIG = {
     name: 'Comedores Comunitarios',
     description: 'Espacios de alimentación para la comunidad',
     icon: '🍽️',
-    color: [30, 150, 190],
+    color: [243, 193, 27],
     datasetId: 'hjuiww',
     subcategories: {
       community: {
@@ -72,7 +72,7 @@ const CATEGORIES_CONFIG = {
     name: 'Acompañamiento Jurídico',
     description: 'Asesoría y acompañamiento legal gratuito',
     icon: '⚖️',
-    color: [248, 177, 149],
+    color: [94, 195, 232],
     datasetId: 'oaebc9',
     fields: {
       name: 'Nombre',
@@ -114,7 +114,7 @@ const CATEGORIES_CONFIG = {
     name: 'Atención Violencia Sexual',
     description: 'Centros especializados en atención a víctimas de violencia sexual',
     icon: '🆘',
-    color: [62, 172, 168],
+    color: [157, 26, 23],
     datasetId: '-myqegl',
     fields: {
       name: 'Nombre',
@@ -135,7 +135,7 @@ const CATEGORIES_CONFIG = {
     name: 'Instituciones Públicas',
     description: 'Organismos públicos para trámites y servicios',
     icon: '🏢',
-    color: [162, 212, 171],
+    color: [25, 143, 81],
     datasetId: '-qf9vud',
     subcategories: {
       migration: {
