@@ -1,11 +1,12 @@
+
 window.NIM_MAPBOX_CONFIG = {
     map: {
         container: "mapa",
-        style: "mapbox://styles/sabundes/cmotaf3s8001601rygfdy5t7p",
-        center: [-99.1323,    19.43],
-        zoom: 10.5,
-        pitch: 0,
-        attributionControl: true
+        // style: "mapbox://styles/sabundes/cmotaf3s8001601rygfdy5t7p",
+        style: 'mapbox://styles/juan-fuentes/cmpu7hxvf003901s41haj5oiy',
+        center: [-99.1323, 19.43],
+        zoom: 13,
+        antialias: true
     },
     controls: {
         navigation: {
@@ -24,7 +25,7 @@ window.NIM_MAPBOX_CONFIG = {
     fitBounds: {
         maxZoom: 12,
         duration: 0,
-        desktopPadding: { top: 120, right: 360, bottom: 70, left: 360 },
+        desktopPadding: { top: 80, right: 360, bottom: 70, left: 360 },
         mobilePadding: { top: 170, right: 24, bottom: 180, left: 24 }
     },
     layers: {

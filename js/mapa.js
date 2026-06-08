@@ -1,4 +1,4 @@
-(function initNimMap() {
+function initNimMap() {
     const mapData = window.NIM_MAPBOX_DATA;
     const mapConfig = window.NIM_MAPBOX_CONFIG;
     const token = window.MAPBOX_TOKEN;
@@ -11,7 +11,6 @@
     if (!mapContainer) {
         return;
     }
-
     if (!window.mapboxgl) {
         showWarning("No se pudo cargar Mapbox GL JS.");
         return;
@@ -45,6 +44,10 @@
     renderFilters();
     updateMarkerCount();
 
+    map.on("error", (e) => {
+        console.error("Mapbox GL Error interno:", e.error || e);
+    });
+
     if (mapConfig.controls && mapConfig.controls.navigation) {
         map.addControl(
             new mapboxgl.NavigationControl(mapConfig.controls.navigation.options || {}),
@@ -53,6 +56,8 @@
     }
 
     map.on("load", () => {
+        map.resize(); // Obliga a ajustar el canvas a las dimensiones inyectadas
+
         map.addSource(sourceId, {
             type: "geojson",
             data: createVisibleGeojson(),
@@ -362,4 +367,10 @@
     function escapeAttribute(value) {
         return escapeHtml(value).replace(/`/g, "&#096;");
     }
-}());
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initNimMap);
+} else {
+    initNimMap();
+}
