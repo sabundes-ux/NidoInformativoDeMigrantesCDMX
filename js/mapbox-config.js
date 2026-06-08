@@ -24,9 +24,7 @@ window.NIM_MAPBOX_CONFIG = {
     },
     fitBounds: {
         maxZoom: 12,
-        duration: 0,
-        desktopPadding: { top: 80, right: 360, bottom: 70, left: 360 },
-        mobilePadding: { top: 170, right: 24, bottom: 180, left: 24 }
+        duration: 0
     },
     layers: {
         clusters: {

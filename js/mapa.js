@@ -292,18 +292,10 @@ function initNimMap() {
         }, new mapboxgl.LngLatBounds(features[0].geometry.coordinates, features[0].geometry.coordinates));
 
         map.fitBounds(bounds, {
-            padding: getFitPadding(),
+            padding: 0,
             maxZoom: mapConfig.fitBounds.maxZoom,
             duration: mapConfig.fitBounds.duration
         });
-    }
-
-    function getFitPadding() {
-        if (window.innerWidth < 760) {
-            return mapConfig.fitBounds.mobilePadding;
-        }
-
-        return mapConfig.fitBounds.desktopPadding;
     }
 
     function bindPointerCursor(layerId) {
