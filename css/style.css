@@ -3,6 +3,13 @@
     src: url('./Nidus-Regular.woff2') format('woff2');
 }
 
+@font-face {
+    font-family: 'ABCWhyte';
+    src: url('../fonts/ABCWhyteMonoInktrap-Heavy-Trial.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --text-color: rgb(0, 0, 0);
     --bg-color: #dbd6d1;
@@ -49,6 +56,10 @@ header .logo a {
 
 header .logo a:hover {
     color: var(--accent-color);
+}
+
+.nim-link {
+    font-family: 'ABCWhyte', sans-serif !important;
 }
 
 header .sections {
